@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>KSD – Kasseler Schrott- und Demontageservice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon direkt eingebettet -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFElEQVRYR+2VsQ2AIBAFzxvZ7zqE1i5p+Ujpi6a7JLhwr+pmqRk8GJ7JhISGCAkP1rXj0KJkqCBqCiCiz8j2ER1i4dzKBTLK1D2ZKi+1oAaoxxXMNt9a6mXoIwcZCo+YgHKoA05bSddo4hLB1vkwH2V3i3GYN7g0+AQ8jtiL1ZB+BWtMo3gLqHB1IbYhxukpQwHAu4uYKpZ4GeHqkDSkxjqAAAAAElFTkSuQmCC">
+
     <style>
         /* Grundlayout */
         body {
@@ -20,7 +25,7 @@
             text-align: center;
         }
 
-        /* Großes Logo */
+        /* Großes Logo mit Animation */
         .logo {
             font-size: 4em;
             font-weight: 900;
@@ -30,6 +35,15 @@
             text-transform: uppercase;
             text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
             margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(-30px);
+            animation: logoAnimation 1.5s forwards;
+        }
+
+        @keyframes logoAnimation {
+            0% { opacity: 0; transform: translateY(-30px); text-shadow: 0 0 0px rgba(255,255,255,0); }
+            50% { opacity: 1; transform: translateY(0); text-shadow: 2px 2px 10px rgba(255,255,255,0.5); }
+            100% { opacity: 1; transform: translateY(0); text-shadow: 2px 2px 5px rgba(0,0,0,0.3); }
         }
 
         header h1 {
@@ -89,7 +103,8 @@
             line-height: 1.6;
         }
 
-        .btn {
+        /* Buttons */
+        .btn, .email-btn {
             display: inline-block;
             margin-top: 20px;
             padding: 12px 25px;
@@ -98,11 +113,25 @@
             text-decoration: none;
             border-radius: 25px;
             font-weight: bold;
-            transition: background 0.3s;
+            transition: background 0.3s, box-shadow 0.3s;
+            cursor: pointer;
         }
 
-        .btn:hover {
+        .btn:hover, .email-btn:hover {
             background: #555;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        /* E-Mail-Feld */
+        .email-field {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            border-radius: 25px;
+            border: 1px solid #ccc;
+            width: 80%;
+            max-width: 400px;
+            font-size: 1em;
         }
 
         footer {
@@ -110,6 +139,27 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo { font-size: 3em; letter-spacing: 3px; }
+            header h1 { font-size: 1.6em; }
+            header p { font-size: 1em; }
+            nav a { margin: 0 10px; font-size: 0.9em; }
+            .btn, .email-btn { padding: 10px 20px; font-size: 0.9em; }
+            .email-field { width: 90%; }
+            section { padding: 40px 15px; }
+            .box { padding: 20px; }
+        }
+
+        @media (max-width: 480px) {
+            .logo { font-size: 2.5em; letter-spacing: 2px; }
+            header h1 { font-size: 1.4em; }
+            header p { font-size: 0.95em; }
+            nav a { margin: 0 5px; font-size: 0.85em; }
+            .btn, .email-btn { width: 90%; padding: 10px 0; }
+            .email-field { width: 90%; }
         }
     </style>
 </head>
@@ -149,12 +199,27 @@
         <h2>Kontakt</h2>
         <p>📞 Telefon: 0174-7237679</p>
         <a class="btn" href="https://wa.me/491747237679" target="_blank">Jetzt über WhatsApp kontaktieren</a>
+        <br>
+        <input id="email" class="email-field" type="email" placeholder="Ihre E-Mail-Adresse">
+        <br>
+        <button class="email-btn" onclick="sendEmail()">E-Mail senden</button>
     </div>
 </section>
 
 <footer>
     <p>© 2026 KSD – Kasseler Schrott- und Demontageservice</p>
 </footer>
+
+<script>
+    function sendEmail() {
+        const emailInput = document.getElementById('email').value;
+        if(emailInput) {
+            window.location.href = `mailto:info@ksd-service.de?subject=Kontakt&body=Hallo, ich möchte Kontakt aufnehmen: ${emailInput}`;
+        } else {
+            alert("Bitte geben Sie Ihre E-Mail-Adresse ein.");
+        }
+    }
+</script>
 
 </body>
 </html>
