@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>KSD Kasseler Schrott- und Demontageservice</title>
+
+    <style>
+        /* Grundlayout */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background: #1e1e1e;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            color: #ddd;
+        }
+
+        nav {
+            background: #fff;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #1e1e1e;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #28a745; /* Grüner Akzent */
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .box {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #1e1e1e;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #1e7e34;
+        }
+
+        footer {
+            background: #1e1e1e;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>KSD Kasseler Schrott- und Demontageservice</h1>
+    <p>Schnell. Zuverlässig. Kostenlos.</p>
+</header>
+
+<nav>
+    <a href="#Kostenlose Schrottentsorgung sowie Ankauf von Schrott!
+      Demontagearbeiten!
+      Hausmeistertätigkeiten!
+      Entrsorgung/Entrümpelungen!
+      Abbrucharbeiten!
+      ">Leistungen</a>
+    <a href="#Wir stammen aus Kassel. Schrotthändler in der 4. Generation. ">Über mich</a>
+    <a href="#0172 3609841 ksd.kassel@gmail.com">Kontakt</a>
+</nav>
+
+<section id="leistungen">
+    <div class="box">
+        <h2>Leistungen</h2>
+        <p>✔ Schrottabholung kostenlos</p>
+        <p>✔ Altmetall Ankauf</p>
+        <p>✔ Entrümpelung</p>
+    </div>
+</section>
+
+<section id="ueber" style="background:#f0f0f0;">
+    <div class="box">
+        <h2>Über mich</h2>
+        <p>Ich bin ein zuverlässiger Schrotthändler und hole Ihren Schrott schnell und unkompliziert ab. Mit jahrelanger Erfahrung sorge ich dafür, dass alles sauber und umweltgerecht entsorgt wird.</p>
+    </div>
+</section>
+
+<section id="kontakt">
+    <div class="box">
+        <h2>Kontakt</h2>
+        <p>📞 Telefon: 0123 456789</p>
+        <p>📧 Email: info@deinname.de</p>
+        <a class="btn" href="tel:0123456789">Jetzt anrufen</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 KSD Kasseler Schrott- und Demontageservice</p>
+</footer>
+
+</body>
+</html>
