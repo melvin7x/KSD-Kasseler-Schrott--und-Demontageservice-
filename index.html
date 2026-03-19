@@ -21,7 +21,7 @@
             position: relative;
         }
 
-        /* Logo */
+        /* Logo mit Animation */
         .logo {
             position: absolute;
             top: 20px;
@@ -31,6 +31,13 @@
             color: #fff;
             letter-spacing: 2px;
             font-family: 'Courier New', monospace;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        /* Glow-Animation */
+        @keyframes glow {
+            from { text-shadow: 0 0 2px #fff, 0 0 5px #fff; }
+            to { text-shadow: 0 0 5px #fff, 0 0 10px #fff; }
         }
 
         header h1 {
@@ -133,6 +140,7 @@
         <h2>Unsere Leistungen</h2>
         <p>✔ Schrottabholung kostenlos</p>
         <p>✔ Altmetall Ankauf</p>
+        <p>✔ Entrümpelung/Entsorgung</p>
         <p>✔ Entrümpelung</p>
     </div>
 </section>
@@ -140,7 +148,7 @@
 <section id="ueber" style="background:#eee;">
     <div class="box">
         <h2>Über uns</h2>
-        <p>Wir sind ein zuverlässiger Schrotthändler aus Kassel und holen Ihren Schrott schnell und unkompliziert ab. Mit jahrelanger Erfahrung sorgen wir für eine saubere und umweltgerechte Entsorgung.</p>
+        <p>Wir sind ein zuverlässiger Schrotthändler aus Kassel und holen Ihren Schrott schnell und unkompliziert ab. Mit jahrelanger Erfahrung (in 4. Generation) sorgen wir für eine saubere und umweltgerechte Entsorgung.</p>
     </div>
 </section>
 
@@ -155,6 +163,9 @@
 <footer>
     <p>© 2026 KSD – Kasseler Schrott- und Demontageservice</p>
 </footer>
+
+</body>
+</html>
 
 </body>
 </html>
